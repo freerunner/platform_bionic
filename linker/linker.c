@@ -419,6 +419,7 @@ static unsigned elfhash(const char *_name)
         h ^= g;
         h ^= g >> 24;
     }
+    h &= 0x0fffffff;
     return h;
 }
 
